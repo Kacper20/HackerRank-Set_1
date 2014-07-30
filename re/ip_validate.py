@@ -9,7 +9,7 @@ def validate(str):
         d = int(matchip4.group(4))
         if a >= 0 and a <= 255 and b>= 0 and b<= 255 and c>= 0 and c <= 255 and d>= 0 and d<= 255:
             return 'IPv4'
-    matchip6 = re.search(r'[0-9a-f]{1,4}:[0-9a-f]{1,4}:[0-9a-f]{1,4}:[0-9a-f]{1,4}:[0-9a-f]{1,4}:[0-9a-f]{1,4}:[0-9a-f]{1,4}:[0-9a-f]{1,4}', str)
+    matchip6 = re.search(r'[0-9a-f]{1,4}:[0-9a-f]{1,4}:[0-9a-f]{1,4}:[0-9a-f]{1,4}:[0-9a-f]{1,4}:[0-9a-f]{1,4}:[0-9a-f]{1,4}:[0-9a-f]{1,4}$', str)
     if matchip6:
         return 'IPv6'
     return 'Neither'
